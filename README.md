@@ -1,10 +1,9 @@
-# LinkRouter
+# PowerDroid
 
-[![GitHub release](https://img.shields.io/github/v/release/AskerFED/link-router)](https://github.com/AskerFED/link-router/releases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Windows](https://img.shields.io/badge/platform-Windows%2010%2F11-blue)](https://github.com/AskerFED/link-router)
+[![GitHub release](https://img.shields.io/github/v/release/admindroid-community/PowerDroid)](https://github.com/admindroid-community/PowerDroid/releases)
+[![Windows](https://img.shields.io/badge/platform-Windows%2010%2F11-blue)](https://github.com/admindroid-community/PowerDroid)
 
-A Windows desktop application that intelligently routes URLs to the correct browser and profile. When you click any link from Teams, Outlook, Slack, or any other app, LinkRouter intercepts it and opens it in the right browser based on your configured rules.
+A Windows desktop application that intelligently routes URLs to the correct browser and profile. When you click any link from Teams, Outlook, Slack, or any other app, PowerDroid intercepts it and opens it in the right browser based on your configured rules.
 
 ---
 
@@ -26,7 +25,6 @@ A Windows desktop application that intelligently routes URLs to the correct brow
 - [Troubleshooting](#troubleshooting)
 - [Browser Support](#browser-support)
 - [Contributing](#contributing)
-- [License](#license)
 
 ---
 
@@ -34,9 +32,9 @@ A Windows desktop application that intelligently routes URLs to the correct brow
 
 Getting started takes less than a minute:
 
-1. **Launch LinkRouter** — The settings window opens automatically
+1. **Launch PowerDroid** — The settings window opens automatically
 2. **Set as Default Browser** — Go to Settings and click "Open Windows Settings"
-3. **Choose LinkRouter** — Select LinkRouter for HTTP and HTTPS links
+3. **Choose PowerDroid** — Select PowerDroid for HTTP and HTTPS links
 4. **Pick a Fallback Browser** — Choose which browser opens when no rules match
 5. **Create Rules** — Add rules for websites you want to route to specific browsers
 
@@ -52,7 +50,7 @@ The **Home** tab shows your fallback browser selection, statistics for your rule
 
 ### URL Rules
 
-Rules tell LinkRouter which browser to use for specific websites. For example:
+Rules tell PowerDroid which browser to use for specific websites. For example:
 - `github.com` → Open in Chrome (Work profile)
 - `netflix.com` → Open in Firefox (Personal profile)
 
@@ -81,7 +79,7 @@ Each rule displays:
 
 ![Add Rule Dialog](docs/screenshots/add-rule-dialog.png)
 
-Enter any domain name or keyword. LinkRouter will match it against URLs and open them in your chosen browser.
+Enter any domain name or keyword. PowerDroid will match it against URLs and open them in your chosen browser.
 
 ---
 
@@ -144,7 +142,7 @@ When a URL matches a rule with multiple profiles:
 
 ### Smart Notifications
 
-When you click a URL that doesn't match any rule, LinkRouter opens it in your fallback browser and shows a notification.
+When you click a URL that doesn't match any rule, PowerDroid opens it in your fallback browser and shows a notification.
 
 <br/>
 
@@ -156,7 +154,7 @@ Click **Create Rule** to instantly add a rule for that domain — no need to ope
 
 ### Clipboard Monitoring
 
-When you copy a URL that matches an existing rule, LinkRouter shows you where it will open.
+When you copy a URL that matches an existing rule, PowerDroid shows you where it will open.
 
 <br/>
 
@@ -172,7 +170,7 @@ The notification shows:
 
 ### System Tray
 
-LinkRouter runs in your system tray for quick access without opening the full settings window.
+PowerDroid runs in your system tray for quick access without opening the full settings window.
 
 <br/>
 
@@ -182,13 +180,13 @@ Right-click the tray icon for quick options:
 - **Monitoring Active** — Toggle clipboard monitoring
 - **Pause for...** — Temporarily disable monitoring
 - **Settings** — Open the settings window
-- **Quit** — Close LinkRouter
+- **Quit** — Close PowerDroid
 
 ---
 
 ## Dark/Light Theme
 
-LinkRouter supports Light, Dark, and System theme modes. The System option automatically follows your Windows dark/light setting.
+PowerDroid supports Light, Dark, and System theme modes. The System option automatically follows your Windows dark/light setting.
 
 | Mode | Behavior |
 |------|----------|
@@ -202,7 +200,7 @@ Switch themes instantly from **Settings > Appearance**. The change applies immed
 
 ## Settings
 
-The Settings page controls how LinkRouter behaves.
+The Settings page controls how PowerDroid behaves.
 
 <br/>
 
@@ -216,14 +214,14 @@ The status indicator at the bottom-left shows your setup status:
 
 | Status | Meaning |
 |--------|---------|
-| 🟢 **Active** | LinkRouter is your default browser — everything works |
-| 🟠 **Not Default** | You need to set LinkRouter as default in Windows |
+| **Active** | PowerDroid is your default browser — everything works |
+| **Not Default** | You need to set PowerDroid as default in Windows |
 
 <br/>
 
 ![Not Default Status](docs/screenshots/status-not-default.png)
 
-If you see the orange "Not Default" status, click **Open Windows Settings** and set LinkRouter as your default browser.
+If you see the orange "Not Default" status, click **Open Windows Settings** and set PowerDroid as your default browser.
 
 <br/>
 
@@ -253,7 +251,7 @@ Never lose your configuration — export everything to a file.
 
 ### Data Storage
 
-Your data is saved in `%APPDATA%\LinkRouter\`:
+Your data is saved in `%APPDATA%\PowerDroid\`:
 
 | File | Contents |
 |------|----------|
@@ -274,23 +272,19 @@ Your data is saved in `%APPDATA%\LinkRouter\`:
 
 ### Option 1: Installer (Recommended)
 
-1. Download `LinkRouterSetup-2.0.0.exe` from [Releases](https://github.com/AskerFED/link-router/releases)
+1. Download `PowerDroidSetup-1.0.0.exe` from [Releases](https://github.com/admindroid-community/PowerDroid/releases)
 2. Run the installer and follow the prompts
-3. Application installs to `C:\Program Files\LinkRouter\`
+3. Application installs to `C:\Program Files\PowerDroid\`
 
 ### Option 2: Build from Source
 
 ```bash
-git clone https://github.com/AskerFED/link-router.git
-cd LinkRouter
-dotnet publish BrowserSelector.csproj -c Release -r win-x64 --self-contained false
+git clone https://github.com/admindroid-community/PowerDroid.git
+cd PowerDroid
+dotnet publish PowerDroid.csproj -c Release -r win-x64 --self-contained false
 ```
 
-Output: `bin\Release\net8.0-windows\win-x64\publish\LinkRouter.exe`
-
-### Option 3: Portable
-
-Copy `LinkRouter.exe` anywhere and run it. Data is stored in `%APPDATA%\LinkRouter\`.
+Output: `bin\Release\net8.0-windows10.0.19041.0\win-x64\publish\PowerDroid.exe`
 
 ---
 
@@ -299,7 +293,7 @@ Copy `LinkRouter.exe` anywhere and run it. Data is stored in `%APPDATA%\LinkRout
 ```
 URL clicked (Teams, Outlook, Slack, etc.)
         ↓
-LinkRouter intercepts as default browser
+PowerDroid intercepts as default browser
         ↓
 ┌──────────────────────────────────────┐
 │  Check URL Groups                    │
@@ -343,9 +337,9 @@ Patterns are case-insensitive and match anywhere in the domain.
 **Examples:**
 
 ```bash
-LinkRouter.exe "https://github.com/user/repo"
-LinkRouter.exe --manage
-LinkRouter.exe --register
+PowerDroid.exe "https://github.com/user/repo"
+PowerDroid.exe --manage
+PowerDroid.exe --register
 ```
 
 ---
@@ -355,12 +349,12 @@ LinkRouter.exe --register
 ### Check Your Status First
 
 Look at the status indicator in the bottom-left of Settings:
-- 🟢 **Active** — Everything is working
-- 🟠 **Not Default** — Set LinkRouter as your default browser
+- **Active** — Everything is working
+- **Not Default** — Set PowerDroid as your default browser
 
-### LinkRouter doesn't appear in Default Apps
+### PowerDroid doesn't appear in Default Apps
 
-1. Run `LinkRouter.exe --register` from command line
+1. Run `PowerDroid.exe --register` from command line
 2. Sign out of Windows and sign back in
 3. Try again in Windows Settings
 
@@ -374,7 +368,7 @@ Look at the status indicator in the bottom-left of Settings:
 ### Browser profiles not showing
 
 1. Close the browser completely (check Task Manager)
-2. Restart LinkRouter
+2. Restart PowerDroid
 3. Profiles should now appear
 
 ### Pattern not matching
@@ -385,7 +379,7 @@ Look at the status indicator in the bottom-left of Settings:
 
 ### Logs
 
-Check `%APPDATA%\LinkRouter\` for `log.txt`
+Check `%APPDATA%\PowerDroid\` for `log.txt`
 
 ---
 
@@ -393,12 +387,12 @@ Check `%APPDATA%\LinkRouter\` for `log.txt`
 
 | Browser | Profile Detection |
 |---------|-------------------|
-| Google Chrome | ✓ Full support |
-| Microsoft Edge | ✓ Full support |
-| Mozilla Firefox | ✓ Full support |
-| Brave Browser | ✓ Full support |
-| Opera | ✓ Full support |
-| Opera GX | ✓ Full support |
+| Google Chrome | Full support |
+| Microsoft Edge | Full support |
+| Mozilla Firefox | Full support |
+| Brave Browser | Full support |
+| Opera | Full support |
+| Opera GX | Full support |
 
 Detected profile information includes:
 - Profile name
@@ -418,10 +412,4 @@ Detected profile information includes:
 
 ---
 
-## License
-
-MIT License — See [LICENSE](LICENSE) file for details.
-
----
-
-**LinkRouter** — Smart URL routing for Windows
+**PowerDroid** — Smart URL routing for Windows
