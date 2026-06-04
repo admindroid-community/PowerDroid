@@ -1,415 +1,210 @@
-# PowerDroid
+# Smart Browse | Automatic Link Routing Tool for Windows | PowerDroid  
 
-[![GitHub release](https://img.shields.io/github/v/release/admindroid-community/PowerDroid)](https://github.com/admindroid-community/PowerDroid/releases)
-[![Windows](https://img.shields.io/badge/platform-Windows%2010%2F11-blue)](https://github.com/admindroid-community/PowerDroid)
+Smart Browse by PowerDroid helps you automatically open every link in the correct browser and profile based on routing rules you create.  
 
-A Windows desktop application that intelligently routes URLs to the correct browser and profile. When you click any link from Teams, Outlook, Slack, or any other app, PowerDroid intercepts it and opens it in the right browser based on your configured rules.
+Instead of manually switching browsers, copying links, or selecting profiles every time, you can use Smart Browse to intelligently route URLs across work, personal, admin, and development workflows. 
 
----
+Perfect for users managing multiple browsers, profiles, environments, admin portals, and developer setups. 
 
-## Table of Contents
+**Automatic Routing | URL Groups | Clipboard Monitoring | Rule Management | Unmatched URL Alerts** 
 
-- [Quick Start](#quick-start)
-- [Features](#features)
-  - [URL Rules](#url-rules)
-  - [URL Groups](#url-groups)
-  - [Multi-Profile Selection](#multi-profile-selection)
-  - [Smart Notifications](#smart-notifications)
-  - [Clipboard Monitoring](#clipboard-monitoring)
-  - [System Tray](#system-tray)
-- [Dark/Light Theme](#darklight-theme)
-- [Settings](#settings)
-- [Installation](#installation)
-- [How It Works](#how-it-works)
-- [Command-Line Options](#command-line-options)
-- [Troubleshooting](#troubleshooting)
-- [Browser Support](#browser-support)
-- [Contributing](#contributing)
+👉 Explore Smart Browse by PowerDroid capabilities: [http://admindroid.com/powerdroid-smart-browse](http://admindroid.com/powerdroid-smart-browse)
 
----
+![PowerDroid Smart Browse Tool](https://blog.admindroid.com/wp-content/uploads/2026/06/PowerDroid-Smart-Browse-Tool.png)
 
-## Quick Start
+--- 
 
-Getting started takes less than a minute:
+# Why Smart Browse? 
 
-1. **Launch PowerDroid** — The settings window opens automatically
-2. **Set as Default Browser** — Go to Settings and click "Open Windows Settings"
-3. **Choose PowerDroid** — Select PowerDroid for HTTP and HTTPS links
-4. **Pick a Fallback Browser** — Choose which browser opens when no rules match
-5. **Create Rules** — Add rules for websites you want to route to specific browsers
+Windows always opens links using the default browser, which often creates unnecessary browser switching and profile conflicts throughout the day. 
 
-<br/>
+This commonly leads to: 
 
-![Home Dashboard](docs/screenshots/home-page.png)
+* Work links opening in personal profiles 
 
-The **Home** tab shows your fallback browser selection, statistics for your rules and groups, and quick actions to manage your configuration.
+* Admin portals opening in the personal browser 
 
----
+* Repeated copy-paste workflows 
 
-## Features
+* Constant manual browser switching 
 
-### URL Rules
+Smart Browse solves this by automatically routing links based on rules you configure once. 
 
-Rules tell PowerDroid which browser to use for specific websites. For example:
-- `github.com` → Open in Chrome (Work profile)
-- `netflix.com` → Open in Firefox (Personal profile)
+--- 
 
-<br/>
+# How Smart Browse Works 
 
-![Rules List](docs/screenshots/rules-list.png)
+## 1️⃣ Set up PowerDroid Smart Browse as your default browser 
 
-Each rule displays:
-- **Toggle switch** — Enable or disable the rule
-- **URL pattern** — The domain or keyword to match
-- **Browser profiles** — Which browser(s) will open matching URLs
-- **Last updated** — When the rule was last modified
-- **Actions** — Move, edit, or delete the rule
+Set the tool as your default browser once, and every link you click from the applications below is intercepted automatically. 
 
-<br/>
+* Teams 
 
-**Creating a Rule:**
+* Outlook 
 
-1. Click **Manage Rules** in the sidebar
-2. Click the **+ Add Rule** button
-3. Enter a URL pattern (like `github.com` or `slack`)
-4. Select a browser and profile
-5. Click **Add**
+* Slack 
 
-<br/>
+* Other desktop applications 
 
-![Add Rule Dialog](docs/screenshots/add-rule-dialog.png)
+--- 
 
-Enter any domain name or keyword. PowerDroid will match it against URLs and open them in your chosen browser.
+## 2️⃣ Create routing rules 
 
----
+Assign URL patterns and related domain groups to specific browsers and profiles. 
 
-### URL Groups
+--- 
 
-URL Groups let you manage many related URLs together. Instead of creating 20 separate rules for Microsoft services, create one group with all the URLs.
+## 3️⃣ Smart Browse matches every link automatically 
 
-<br/>
+Whenever you click or copy a URL, Smart Browse instantly checks your saved routing rules. 
 
-![URL Groups List](docs/screenshots/url-groups-list.png)
+--- 
 
-**Built-in Groups (disabled by default):**
+## 4️⃣ Open links in the correct browser and profile 
 
-| Group | Services Included | URLs |
-|-------|-------------------|------|
-| **Microsoft 365** | Outlook, Teams, SharePoint, OneDrive, Azure, Office | 19 |
-| **Google Suite** | Gmail, Drive, Docs, Sheets, Calendar, Meet, Chat | 13 |
+Matching links automatically launch in the correct browser and profile without manual switching. 
 
-Enable a built-in group, assign a browser, and all those URLs are handled automatically.
+--- 
 
-<br/>
+# Core Smart Browse Features 
 
-**Editing a Group:**
+## Create URL Groups for Related Domains 
 
-![Edit URL Group](docs/screenshots/multi-profile-mode.png)
+Instead of creating separate rules for every domain, Smart Browse lets you group related domains into a single routing rule. Assign one browser profile, and all matching domains automatically follow the same routing behaviour. 
 
-Configure the group name, description, URL patterns, and which browser/profile to use. You can also enable clipboard notifications for the entire group.
+Built-in templates include: 
 
-<br/>
+* Microsoft 365 - admin.microsoft.com, azure.portal.com, outlook.office.com, etc. 
 
-**Moving Rules to Groups:**
+* Google Workspace - mail.google.com, drive.google.com, docs.google.com, etc. 
 
-Keep your configuration organized by moving individual rules into groups:
+--- 
 
-![Move to Group](docs/screenshots/move-to-group.png)
+## Clipboard Monitoring  
 
-Click the export icon on any rule to move it into Microsoft 365, Google Suite, or your own custom groups.
+Smart Browse continuously monitors your clipboard for copied URLs and instantly checks them against your routing rules.  
 
----
+When a copied URL matches an existing rule, a Smart Browse pop-up appears, allowing you to open it in the correct browser & profile with a single click.  
 
-### Multi-Profile Selection
+You can disable monitoring or pause it for 5, 15, 30 minutes, or 1 hour and resume it anytime. 
 
-Sometimes you need to choose which browser to use each time. A work URL might need your Work Chrome profile or Personal Firefox depending on the situation.
+--- 
 
-| Profiles Assigned | Behavior |
-|-------------------|----------|
-| 1 profile | Opens automatically |
-| 2+ profiles | Shows picker to choose |
+## Create Rules Instantly from Notifications 
 
-<br/>
+When Smart Browse detects a URL that doesn't match any existing rule, it displays a toast alert and automatically opens the link in your fallback browser. You can then create a routing rule directly from the notification: 
 
-![Profile Picker](docs/screenshots/profile-picker.png)
+* Click Create Rule   
 
-When a URL matches a rule with multiple profiles:
-- The URL and matched rule name appear at the top
-- Click any profile to open the link
-- Click Cancel to close without opening
+* Select the browser to open the URL 
 
----
+* Choose the browser profile 
 
-### Smart Notifications
+* Click ‘Add’ to save the rule 
 
-When you click a URL that doesn't match any rule, PowerDroid opens it in your fallback browser and shows a notification.
+--- 
 
-<br/>
+## Rules Management 
 
-![Smart Notification](docs/screenshots/smart-notification.png)
+Manage routing behaviour through a centralized and organized rule management experience. 
 
-Click **Create Rule** to instantly add a rule for that domain — no need to open settings and configure it manually.
+Features include: 
 
----
+* Enable or disable rules anytime 
 
-### Clipboard Monitoring
+* Search and sort routing rules 
 
-When you copy a URL that matches an existing rule, PowerDroid shows you where it will open.
+* Move rules between grouped and individual modes 
 
-<br/>
+* Edit or delete rules easily 
 
-![Clipboard Notification](docs/screenshots/clipboard-notification.png)
+--- 
 
-The notification shows:
-- The domain you copied
-- Which rule matched
-- Which browser and profile will be used
-- Option to open immediately or dismiss
+## Detect Rule Conflicts Automatically 
 
----
+Smart Browse automatically identifies overlapping or conflicting routing rules before they cause unexpected behaviour. 
 
-### System Tray
+When a conflict is detected, you can: 
 
-PowerDroid runs in your system tray for quick access without opening the full settings window.
+* View the conflicting rule 
 
-<br/>
+* Keep the existing rule or replace it  
 
-![System Tray Menu](docs/screenshots/tray-clipboard-monitoring.png)
+This helps prevent duplicate rules and ensures URLs are always routed as intended. 
 
-Right-click the tray icon for quick options:
-- **Monitoring Active** — Toggle clipboard monitoring
-- **Pause for...** — Temporarily disable monitoring
-- **Settings** — Open the settings window
-- **Quit** — Close PowerDroid
+--- 
 
----
+## Longest-Match Priority Routing 
 
-## Dark/Light Theme
+When multiple rules match the same URL, Smart Browse uses the rule with the longest match.  
 
-PowerDroid supports Light, Dark, and System theme modes. The System option automatically follows your Windows dark/light setting.
+For example, 
 
-| Mode | Behavior |
-|------|----------|
-| **System** (default) | Matches your Windows appearance setting |
-| **Light** | Always uses light theme |
-| **Dark** | Always uses dark theme |
+The rule for admin.microsoft.com overrides the broader rule for microsoft.com when you open the Microsoft 365 admin center. 
 
-Switch themes instantly from **Settings > Appearance**. The change applies immediately to all windows, dialogs, and notifications — no restart needed.
+--- 
 
----
+## Export & Restore Your Setup Anytime 
 
-## Settings
+Backup and restore your complete Smart Browse configuration whenever needed. 
 
-The Settings page controls how PowerDroid behaves.
+Export includes: 
 
-<br/>
+* Routing rules 
 
-![Settings Page](docs/screenshots/status-active.png)
+* URL groups 
 
-<br/>
+* Browser settings 
 
-### Default Browser Registration
+--- 
 
-The status indicator at the bottom-left shows your setup status:
+## Privacy Focused 
 
-| Status | Meaning |
-|--------|---------|
-| **Active** | PowerDroid is your default browser — everything works |
-| **Not Default** | You need to set PowerDroid as default in Windows |
+Your routing rules and browser workflows remain completely private. 
 
-<br/>
+* No ads 
 
-![Not Default Status](docs/screenshots/status-not-default.png)
+* No tracking 
 
-If you see the orange "Not Default" status, click **Open Windows Settings** and set PowerDroid as your default browser.
+* No cloud dependency 
 
-<br/>
+* No internet connection required 
 
-### Available Options
+--- 
 
-| Setting | Description |
-|---------|-------------|
-| **Theme** | Choose Light, Dark, or System (follows Windows setting) |
-| **Enable Rules Processing** | Master switch — turn OFF to send all URLs to fallback browser |
-| **Enable Clipboard Monitoring** | Get notified when you copy a URL that matches a rule |
-| **Show Unmatched URL Notifications** | See a notification when opening unknown URLs |
+## Broad Browser Support 
 
-<br/>
+Smart Browse works with popular browsers, making it easy to route URLs across different work, personal, and development environments. 
 
-### Backup & Restore
+Supported browsers include: 
 
-Never lose your configuration — export everything to a file.
+* Google Chrome 
 
-<br/>
+* Microsoft Edge 
 
-![Backup & Restore](docs/screenshots/backup-restore.png)
+* Mozilla Firefox 
 
-- **Export** — Save all rules, groups, and settings to a JSON file
-- **Import** — Restore from a backup (creates a safety backup first)
+* Brave Browser 
 
-<br/>
+* Opera 
 
-### Data Storage
+--- 
 
-Your data is saved in `%APPDATA%\PowerDroid\`:
+# 🎥 See PowerDroid Smart Browse in Action 
 
-| File | Contents |
-|------|----------|
-| `settings.json` | Preferences and fallback browser |
-| `rules.json` | Individual URL rules |
-| `urlgroups.json` | URL groups and patterns |
-| `backups/` | Automatic backups |
+Watch how Smart Browse automatically routes links to the right browser and profile across your daily workflows. 
 
----
+ 👉 Tool walkthrough demo video: [Watch on LinkedIn]() 
 
-## Installation
+--- 
 
-### Requirements
+# 🚀 Open Every Link in the Right Browser & Profile 
 
-- Windows 10 (1607+) or Windows 11
-- 64-bit (x64) architecture
-- .NET 8 Desktop Runtime (installer downloads automatically if missing)
+* Automatically route links to the correct browser and profile 
 
-### Option 1: Installer (Recommended)
+* Organize work, personal, and development workflows 
 
-1. Download `PowerDroidSetup-1.0.0.exe` from [Releases](https://github.com/admindroid-community/PowerDroid/releases)
-2. Run the installer and follow the prompts
-3. Application installs to `C:\Program Files\PowerDroid\`
+* Build smarter multi-browser setups with ease 
 
-### Option 2: Build from Source
-
-```bash
-git clone https://github.com/admindroid-community/PowerDroid.git
-cd PowerDroid
-dotnet publish PowerDroid.csproj -c Release -r win-x64 --self-contained false
-```
-
-Output: `bin\Release\net8.0-windows10.0.19041.0\win-x64\publish\PowerDroid.exe`
-
----
-
-## How It Works
-
-```
-URL clicked (Teams, Outlook, Slack, etc.)
-        ↓
-PowerDroid intercepts as default browser
-        ↓
-┌──────────────────────────────────────┐
-│  Check URL Groups                    │
-│  (Microsoft 365, Google Suite, etc.) │
-└──────────────────┬───────────────────┘
-                   ↓ No match
-┌──────────────────────────────────────┐
-│  Check Individual Rules              │
-│  (your custom URL rules)             │
-└──────────────────┬───────────────────┘
-                   ↓ No match
-┌──────────────────────────────────────┐
-│  Open in Fallback Browser            │
-│  (show notification to create rule)  │
-└──────────────────────────────────────┘
-```
-
-### Pattern Matching
-
-| Pattern | What It Matches |
-|---------|-----------------|
-| `github.com` | github.com, www.github.com, gist.github.com |
-| `docs.google.com` | Only docs.google.com |
-| `sharepoint.com` | All SharePoint sites |
-| `slack` | Any URL containing "slack" |
-
-Patterns are case-insensitive and match anywhere in the domain.
-
----
-
-## Command-Line Options
-
-| Argument | Description |
-|----------|-------------|
-| `<url>` | Process URL through routing rules |
-| `--manage` | Open Settings window |
-| `--register` | Register as browser and open Settings |
-| `--unregister` | Unregister from Windows |
-| `--startup` | Silent launch (for Windows startup) |
-
-**Examples:**
-
-```bash
-PowerDroid.exe "https://github.com/user/repo"
-PowerDroid.exe --manage
-PowerDroid.exe --register
-```
-
----
-
-## Troubleshooting
-
-### Check Your Status First
-
-Look at the status indicator in the bottom-left of Settings:
-- **Active** — Everything is working
-- **Not Default** — Set PowerDroid as your default browser
-
-### PowerDroid doesn't appear in Default Apps
-
-1. Run `PowerDroid.exe --register` from command line
-2. Sign out of Windows and sign back in
-3. Try again in Windows Settings
-
-### Clicking links doesn't use my rules
-
-1. Is the status showing "Active" (green)?
-2. Is "Enable Rules Processing" turned on?
-3. Is the specific rule enabled (blue toggle)?
-4. Does your pattern actually match the URL?
-
-### Browser profiles not showing
-
-1. Close the browser completely (check Task Manager)
-2. Restart PowerDroid
-3. Profiles should now appear
-
-### Pattern not matching
-
-- Patterns are case-insensitive
-- Patterns match anywhere in the domain
-- No wildcards needed — `sharepoint.com` matches all subdomains
-
-### Logs
-
-Check `%APPDATA%\PowerDroid\` for `log.txt`
-
----
-
-## Browser Support
-
-| Browser | Profile Detection |
-|---------|-------------------|
-| Google Chrome | Full support |
-| Microsoft Edge | Full support |
-| Mozilla Firefox | Full support |
-| Brave Browser | Full support |
-| Opera | Full support |
-| Opera GX | Full support |
-
-Detected profile information includes:
-- Profile name
-- Account email (if signed in)
-- Profile path
-
----
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/my-feature`
-3. Make your changes and test thoroughly
-4. Commit: `git commit -m "Add my feature"`
-5. Push: `git push origin feature/my-feature`
-6. Open a Pull Request
-
----
-
-**PowerDroid** — Smart URL routing for Windows
+👉 [Download PowerDroid Smart Browse](http://admindroid.com/powerdroid-smart-browse)
+ 
