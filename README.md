@@ -194,7 +194,7 @@ Supported browsers include:
 
 Watch how Smart Browse automatically routes links to the right browser and profile across your daily workflows. 
 
- 👉 Tool walkthrough demo video: [Watch on LinkedIn]() 
+ 👉 Tool walkthrough demo video: [Watch on YouTube](https://www.youtube.com/watch?v=U3q-eB-bnrs) 
 
 --- 
 
