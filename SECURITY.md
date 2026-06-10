@@ -13,7 +13,7 @@ The latest release and the previous minor release are supported. Older versions 
 
 Please do not open public issues for security vulnerabilities.
 
-- **Email:** support [at] admindroid [dot] com with details (proof of concept, affected versions, Windows version). Replace [at] with @ and [dot] with . when sending.
+- **Email:** support@admindroid.com with details (proof of concept, affected versions, Windows version). Replace [at] with @ and [dot] with . when sending.
 - Optionally, use GitHub's [private security advisory](https://github.com/admindroid-community/PowerDroid/security/advisories/new) workflow.
 
 We will acknowledge receipt within 3-5 business days and work with you on validation, remediation, and coordinated disclosure. If a CVE is appropriate, we will handle or coordinate it.
