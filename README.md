@@ -1,210 +1,143 @@
-# Smart Browse | Automatic Link Routing Tool for Windows | PowerDroid  
+# PowerDroid — Smart Browse & Power Clip for Windows
 
-Smart Browse by PowerDroid helps you automatically open every link in the correct browser and profile based on routing rules you create.  
+> **Version 2.0** · Two features, one lightweight app · by [AdminDroid](https://admindroid.com)
 
-Instead of manually switching browsers, copying links, or selecting profiles every time, you can use Smart Browse to intelligently route URLs across work, personal, admin, and development workflows. 
+PowerDroid is a Windows productivity suite with two features that work great together:
 
-Perfect for users managing multiple browsers, profiles, environments, admin portals, and developer setups. 
+- **🌐 Smart Browse** — automatically opens every link in the right browser and profile based on rules you create.
+- **📋 Power Clip** — a fast, private clipboard history manager for text, links, images, and more.
 
-**Automatic Routing | URL Groups | Clipboard Monitoring | Rule Management | Unmatched URL Alerts** 
+Everything runs **locally** on your device — no accounts, no tracking, no cloud, and no internet connection required to use it.
 
-👉 Explore Smart Browse by PowerDroid capabilities: [http://admindroid.com/powerdroid-smart-browse](http://admindroid.com/powerdroid-smart-browse)
+👉 Explore PowerDroid: [http://admindroid.com/powerdroid-smart-browse](http://admindroid.com/powerdroid)
+
+
+---
+
+# 🌐 Smart Browse — Automatic Link Routing
 
 ![PowerDroid Smart Browse Tool](https://blog.admindroid.com/wp-content/uploads/2026/06/PowerDroid-Smart-Browse-Tool.png)
 
---- 
+Smart Browse helps you automatically open every link in the correct browser and profile based on routing rules you create.
 
-# Why Smart Browse? 
+Instead of manually switching browsers, copying links, or selecting profiles every time, Smart Browse intelligently routes URLs across work, personal, admin, and development workflows — perfect for anyone managing multiple browsers, profiles, environments, and admin portals.
 
-Windows always opens links using the default browser, which often creates unnecessary browser switching and profile conflicts throughout the day. 
+**Automatic Routing · URL Groups · Clipboard URL Detection · Rule Management · Unmatched URL Alerts**
 
-This commonly leads to: 
+## Why Smart Browse?
 
-* Work links opening in personal profiles 
+Windows always opens links with a single default browser, which creates constant browser switching and profile conflicts:
 
-* Admin portals opening in the personal browser 
+- Work links opening in personal profiles
+- Admin portals opening in the personal browser
+- Repeated copy-paste workflows
+- Constant manual browser switching
 
-* Repeated copy-paste workflows 
+Smart Browse solves this by automatically routing links based on rules you configure once.
 
-* Constant manual browser switching 
+## How It Works
 
-Smart Browse solves this by automatically routing links based on rules you configure once. 
+1. **Set PowerDroid Smart Browse as your default browser** — every link you click from Teams, Outlook, Slack, and other desktop apps is intercepted automatically.
+2. **Create routing rules** — assign URL patterns and domain groups to specific browsers and profiles.
+3. **Smart Browse matches every link** — it instantly checks your saved rules whenever you open or copy a URL.
+4. **Links open in the right browser and profile** — automatically, with no manual switching.
 
---- 
+## Core Features
 
-# How Smart Browse Works 
+- **URL Groups for related domains** — group related domains into a single routing rule with one browser profile. Built-in templates included for **Microsoft 365** and **Google Workspace**.
+- **Clipboard URL detection** — watches the clipboard for copied URLs and, when one matches a rule, shows a pop-up to open it in the right browser/profile in one click. Can be paused (5/15/30 min or 1 hour) or disabled.
+- **Create rules instantly from notifications** — when a link matches no rule, a toast lets you create a routing rule on the spot.
+- **Rules management** — enable/disable, search, sort, edit, delete, and move rules between grouped and individual modes.
+- **Automatic conflict detection** — overlapping or conflicting rules are flagged before they cause surprises, with keep-or-replace options.
+- **Longest-match priority routing** — when multiple rules match, the most specific one wins (e.g. `admin.microsoft.com` overrides `microsoft.com`).
+- **Export & restore** — back up and restore your complete configuration (routing rules, URL groups, browser settings) anytime.
 
-## 1️⃣ Set up PowerDroid Smart Browse as your default browser 
+## New in Version 2.0
 
-Set the tool as your default browser once, and every link you click from the applications below is intercepted automatically. 
+- **Incognito / private-window routing** — open a rule or group's links directly in a private/incognito window.
+- **Rule descriptions** and a **full-URL ↔ domain toggle** when creating rules from a copied link.
+- **Targetable fallback profile** — pick the exact default-browser profile (with an avatar picker) used when no rule matches.
+- **Real Firefox profile names** — friendly profile names instead of internal folder names.
+- **First-run welcome overlay** and a **one-click "Open Windows Settings"** button to set PowerDroid as default.
+- **Profile picker for copied URLs** that match multi-profile rules, plus browser icons on profile cards.
 
-* Teams 
+---
 
-* Outlook 
+# 📋 Power Clip — Clipboard History Manager
 
-* Slack 
+Power Clip keeps a searchable history of everything you copy — so you can paste something again later without re-copying. Everything is stored **locally and encrypted**; nothing is ever uploaded.
 
-* Other desktop applications 
+## Features
 
---- 
+- **Captures everything you copy** — text, links, file paths, images, animated GIFs, and rich text (hyperlinks and formatting preserved).
+- **Fast compact popup** — open with a double-Shift trigger or a custom shortcut. It's non-activating, so it never steals focus, and supports full keyboard navigation.
+- **Pin what matters** — pin up to 10 items; pinned items are kept when you clear history.
+- **Search, multi-select & sequential paste** — instant filter-aware search, select multiple items, and paste them in order; selectable preview text with "Paste selection".
+- **Built-in Browsers tab** — launch any browser profile from the popup, mark favourites, and open in a private/incognito window.
+- **Extract text from images (OCR)** — pull text out of a copied image using the built-in Windows on-device OCR engine.
+- **Image storage management** — a storage-aware usage banner and a "Free up space" action; history cap defaults to 200 items.
+- **Pause or disable anytime** — clear "paused / disabled" indicators across every surface and the tray, with a "Resumes in Xm" countdown.
 
-## 2️⃣ Create routing rules 
+## Private by Design
 
-Assign URL patterns and related domain groups to specific browsers and profiles. 
+- **Stored locally and encrypted at rest** — clipboard history is encrypted with Windows' built-in per-user encryption (DPAPI); the file is readable only by your Windows account, not by other users, other machines, or a backup copy.
+- **Secrets are never captured** — content that apps mark as sensitive (password managers, banking apps, "exclude from clipboard history") is skipped entirely, using the same markers Windows Clipboard History honours.
+- **Nothing is ever uploaded.**
 
---- 
+## Works over elevated (admin) windows — install required
 
-## 3️⃣ Smart Browse matches every link automatically 
+Power Clip's global shortcut and paste keep working even when an **elevated / administrator** window is in the foreground (an admin PowerShell or Command Prompt, Task Manager, Registry Editor, an elevated editor, etc.).
 
-Whenever you click or copy a URL, Smart Browse instantly checks your saved routing rules. 
+Windows only lets a program send input to, and read the clipboard for, higher-integrity (elevated) windows if that program has **UIAccess** — a privilege Windows grants **only** to an app that is **Authenticode-signed** *and* running from a **secure location** (`Program Files` or `System32`).
 
---- 
+That's why PowerDroid must be **installed with the official signed installer** rather than run as a loose/portable `.exe`:
 
-## 4️⃣ Open links in the correct browser and profile 
+- The installer places the **signed `PowerDroid.exe` in `Program Files`** and enables UIAccess, so the clipboard popup, hotkeys, and paste work across **every** window — elevated or not.
+- The install directory is fixed to `Program Files` for this reason (you can't relocate it); a signed exe outside a secure location would fail to launch under UIAccess.
+- The app still **runs at your normal (non-elevated) user level** — UIAccess only lets it interact with elevated windows; it does not run PowerDroid itself as administrator.
 
-Matching links automatically launch in the correct browser and profile without manual switching. 
+> If you run an **unsigned build** or a **copied-out exe**, PowerDroid still works normally over regular windows, but its global shortcut and paste will **not** function while an elevated window is focused.
 
---- 
+---
 
-# Core Smart Browse Features 
+# 🔒 Privacy & Security
 
-## Create URL Groups for Related Domains 
+PowerDroid is built to keep your data on your device.
 
-Instead of creating separate rules for every domain, Smart Browse lets you group related domains into a single routing rule. Assign one browser profile, and all matching domains automatically follow the same routing behaviour. 
+- **Runs entirely locally** — no ads, no tracking, no cloud dependency, no account, and no internet connection required to use it.
+- **Encrypted clipboard history** (Windows DPAPI) and secret-marker exclusion so password-manager content is never stored.
+- **Safe link launching** — only genuine `http`/`https` URLs are passed to the browser, preventing command/argument injection.
+- **Verified auto-updates** — on signed builds, updates are downloaded over HTTPS and pass Authenticode signature verification before running; the installer also verifies the Microsoft signature of the .NET runtime it downloads.
+- **No administrator rights needed** to run the app; data stays in your own user profile.
 
-Built-in templates include: 
+For a full breakdown of data storage, network activity, and permissions, see [TRANSPARENCY.md](TRANSPARENCY.md).
 
-* Microsoft 365 - admin.microsoft.com, azure.portal.com, outlook.office.com, etc. 
+---
 
-* Google Workspace - mail.google.com, drive.google.com, docs.google.com, etc. 
+# 🧩 Broad Browser Support
 
---- 
+Smart Browse and Power Clip work with popular browsers, making it easy to route URLs and launch profiles across work, personal, and development environments:
 
-## Clipboard Monitoring  
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+- Brave Browser
+- Opera & Opera GX
 
-Smart Browse continuously monitors your clipboard for copied URLs and instantly checks them against your routing rules.  
+---
 
-When a copied URL matches an existing rule, a Smart Browse pop-up appears, allowing you to open it in the correct browser & profile with a single click.  
+# 🎥 See PowerDroid in Action
 
-You can disable monitoring or pause it for 5, 15, 30 minutes, or 1 hour and resume it anytime. 
+Watch how Smart Browse automatically routes links to the right browser and profile across your daily workflows.
 
---- 
+👉 Tool walkthrough demo video: [Watch on LinkedIn]()
 
-## Create Rules Instantly from Notifications 
+---
 
-When Smart Browse detects a URL that doesn't match any existing rule, it displays a toast alert and automatically opens the link in your fallback browser. You can then create a routing rule directly from the notification: 
+# 🚀 Get PowerDroid
 
-* Click Create Rule   
+- Open every link in the right browser and profile — automatically
+- Keep a fast, private, encrypted clipboard history
+- Organize work, personal, and development workflows with ease
 
-* Select the browser to open the URL 
-
-* Choose the browser profile 
-
-* Click ‘Add’ to save the rule 
-
---- 
-
-## Rules Management 
-
-Manage routing behaviour through a centralized and organized rule management experience. 
-
-Features include: 
-
-* Enable or disable rules anytime 
-
-* Search and sort routing rules 
-
-* Move rules between grouped and individual modes 
-
-* Edit or delete rules easily 
-
---- 
-
-## Detect Rule Conflicts Automatically 
-
-Smart Browse automatically identifies overlapping or conflicting routing rules before they cause unexpected behaviour. 
-
-When a conflict is detected, you can: 
-
-* View the conflicting rule 
-
-* Keep the existing rule or replace it  
-
-This helps prevent duplicate rules and ensures URLs are always routed as intended. 
-
---- 
-
-## Longest-Match Priority Routing 
-
-When multiple rules match the same URL, Smart Browse uses the rule with the longest match.  
-
-For example, 
-
-The rule for admin.microsoft.com overrides the broader rule for microsoft.com when you open the Microsoft 365 admin center. 
-
---- 
-
-## Export & Restore Your Setup Anytime 
-
-Backup and restore your complete Smart Browse configuration whenever needed. 
-
-Export includes: 
-
-* Routing rules 
-
-* URL groups 
-
-* Browser settings 
-
---- 
-
-## Privacy Focused 
-
-Your routing rules and browser workflows remain completely private. 
-
-* No ads 
-
-* No tracking 
-
-* No cloud dependency 
-
-* No internet connection required 
-
---- 
-
-## Broad Browser Support 
-
-Smart Browse works with popular browsers, making it easy to route URLs across different work, personal, and development environments. 
-
-Supported browsers include: 
-
-* Google Chrome 
-
-* Microsoft Edge 
-
-* Mozilla Firefox 
-
-* Brave Browser 
-
-* Opera 
-
---- 
-
-# 🎥 See PowerDroid Smart Browse in Action 
-
-Watch how Smart Browse automatically routes links to the right browser and profile across your daily workflows. 
-
- 👉 Tool walkthrough demo video: [Watch on YouTube](https://www.youtube.com/watch?v=U3q-eB-bnrs) 
-
---- 
-
-# 🚀 Open Every Link in the Right Browser & Profile 
-
-* Automatically route links to the correct browser and profile 
-
-* Organize work, personal, and development workflows 
-
-* Build smarter multi-browser setups with ease 
-
-👉 [Download PowerDroid Smart Browse](http://admindroid.com/powerdroid-smart-browse)
- 
+👉 [Download PowerDroid](http://admindroid.com/powerdroid-smart-browse)
