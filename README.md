@@ -9,8 +9,7 @@ PowerDroid is a Windows productivity suite with two features that work great tog
 
 Everything runs **locally** on your device — no accounts, no tracking, no cloud, and no internet connection required to use it.
 
-👉 Explore PowerDroid: [http://admindroid.com/powerdroid-smart-browse](http://admindroid.com/powerdroid)
-
+👉 Explore PowerDroid capabilities: [http://admindroid.com/powerdroid-smart-browse](http://admindroid.com/powerdroid-smart-browse)
 
 ---
 
@@ -26,14 +25,19 @@ Instead of manually switching browsers, copying links, or selecting profiles eve
 
 ## Why Smart Browse?
 
-Windows always opens links with a single default browser, which creates constant browser switching and profile conflicts:
+Windows always opens links using the default browser, which often creates unnecessary browser switching and profile conflicts throughout the day. 
 
-- Work links opening in personal profiles
-- Admin portals opening in the personal browser
-- Repeated copy-paste workflows
-- Constant manual browser switching
+This commonly leads to: 
 
-Smart Browse solves this by automatically routing links based on rules you configure once.
+* Work links opening in personal profiles 
+
+* Admin portals opening in the personal browser 
+
+* Repeated copy-paste workflows 
+
+* Constant manual browser switching 
+
+Smart Browse solves this by automatically routing links based on rules you configure once. 
 
 ## How It Works
 
@@ -60,23 +64,43 @@ Smart Browse solves this by automatically routing links based on rules you confi
 - **Real Firefox profile names** — friendly profile names instead of internal folder names.
 - **First-run welcome overlay** and a **one-click "Open Windows Settings"** button to set PowerDroid as default.
 - **Profile picker for copied URLs** that match multi-profile rules, plus browser icons on profile cards.
+- **Built-in Browsers tab** — launch any browser profile from the popup, mark favourites, and open in a private/incognito window.
 
 ---
 
 # 📋 Power Clip — Clipboard History Manager
 
-Power Clip keeps a searchable history of everything you copy — so you can paste something again later without re-copying. Everything is stored **locally and encrypted**; nothing is ever uploaded.
+![Power Clip | Advanced Clipboard History Tool for Windows](https://blog.admindroid.com/wp-content/uploads/2026/08/Replace-Your-Windows-Clipboard-with-10X-Powerful-Tool-1.png)
 
-## Features
+The native Windows Clipboard is useful, but its 25-entry limit quickly replaces older copied content with newer items. Power Clip provides a persistent clipboard history of up to 1,000 entries, so you can find and reuse copied content whenever you need it.
+
+It keeps your clipboard history searchable while keeping passwords and other sensitive content copied from supported password managers out of history. Everything is stored locally and encrypted.
+
+**Persistent Clipboard History | Search & Filter | OCR Text Extraction | Multi-Select Paste | GIF Preview**
+
+## How It Works
+
+- **Copy as usual** — text, links, images, GIFs, or file paths, just like you normally would.
+- **Auto-saved instantly** — every copied item is added to your clipboard history automatically.
+- **Access anytime** — open the app, or either double press Shift or use custom shortcut for quick compact mode access.
+- **Reuse in one click** — paste any saved item instantly, or use quick actions like OCR text extraction, opening links, or launching files/folders.
+
+## Core Features
 
 - **Captures everything you copy** — text, links, file paths, images, animated GIFs, and rich text (hyperlinks and formatting preserved).
+- **Goes beyond the 25-item Windows limit** — store up to 1,000 clipboard entries, with size options of 200, 500, or 1,000.
+- **Keeps history across restarts** — your clipboard history stays intact even after restarting your PC.
 - **Fast compact popup** — open with a double-Shift trigger or a custom shortcut. It's non-activating, so it never steals focus, and supports full keyboard navigation.
 - **Pin what matters** — pin up to 10 items; pinned items are kept when you clear history.
-- **Search, multi-select & sequential paste** — instant filter-aware search, select multiple items, and paste them in order; selectable preview text with "Paste selection".
-- **Built-in Browsers tab** — launch any browser profile from the popup, mark favourites, and open in a private/incognito window.
+- **Search, multi-select & partial paste** — instant filter-aware search, select up to five entries; selectable preview text with "Paste selection".
+- **Trace where content came from** — each entry shows its source app, like Chrome, Teams, Outlook, or Explorer.
+- **Filter your history** — narrow results by source app or content type (text, URLs, file paths, images).
+- **Selective cleanup** — delete single entries, clear everything, or auto-remove items older than 1, 7, or 14 days, while pinned items stay safe.
+- **One-click open** — launch copied links, files, or folders straight from your history.
+- **Choose what gets captured** — turn tracking of text, URLs, images, or file paths on or off individually.
 - **Extract text from images (OCR)** — pull text out of a copied image using the built-in Windows on-device OCR engine.
 - **Image storage management** — a storage-aware usage banner and a "Free up space" action; history cap defaults to 200 items.
-- **Pause or disable anytime** — clear "paused / disabled" indicators across every surface and the tray, with a "Resumes in Xm" countdown.
+- **Pause or disable anytime** — pause for 5, 15, 30 minutes, or 1 hour, or turn it off completely, with clear status indicators and a “Resumes in Xm” countdown.
 
 ## Private by Design
 
@@ -84,19 +108,11 @@ Power Clip keeps a searchable history of everything you copy — so you can past
 - **Secrets are never captured** — content that apps mark as sensitive (password managers, banking apps, "exclude from clipboard history") is skipped entirely, using the same markers Windows Clipboard History honours.
 - **Nothing is ever uploaded.**
 
-## Works over elevated (admin) windows — install required
+## Works Over Elevated Windows
 
-Power Clip's global shortcut and paste keep working even when an **elevated / administrator** window is in the foreground (an admin PowerShell or Command Prompt, Task Manager, Registry Editor, an elevated editor, etc.).
+Power Clip's global shortcut and paste work even when an elevated / administrator window is in the foreground, such as PowerShell, Command Prompt, Task Manager, or Registry Editor.
 
-Windows only lets a program send input to, and read the clipboard for, higher-integrity (elevated) windows if that program has **UIAccess** — a privilege Windows grants **only** to an app that is **Authenticode-signed** *and* running from a **secure location** (`Program Files` or `System32`).
-
-That's why PowerDroid must be **installed with the official signed installer** rather than run as a loose/portable `.exe`:
-
-- The installer places the **signed `PowerDroid.exe` in `Program Files`** and enables UIAccess, so the clipboard popup, hotkeys, and paste work across **every** window — elevated or not.
-- The install directory is fixed to `Program Files` for this reason (you can't relocate it); a signed exe outside a secure location would fail to launch under UIAccess.
-- The app still **runs at your normal (non-elevated) user level** — UIAccess only lets it interact with elevated windows; it does not run PowerDroid itself as administrator.
-
-> If you run an **unsigned build** or a **copied-out exe**, PowerDroid still works normally over regular windows, but its global shortcut and paste will **not** function while an elevated window is focused.
+This requires the official signed installer, which installs PowerDroid in Program Files with UIAccess enabled. Unsigned or copied executables work with regular windows but not when an elevated window is focused.
 
 ---
 
@@ -110,7 +126,7 @@ PowerDroid is built to keep your data on your device.
 - **Verified auto-updates** — on signed builds, updates are downloaded over HTTPS and pass Authenticode signature verification before running; the installer also verifies the Microsoft signature of the .NET runtime it downloads.
 - **No administrator rights needed** to run the app; data stays in your own user profile.
 
-For a full breakdown of data storage, network activity, and permissions, see [TRANSPARENCY.md](TRANSPARENCY.md).
+For a full breakdown of data storage, network activity, and permissions, see [TRANSPARENCY.md](https://github.com/admindroid-community/PowerDroid/blob/github-main/TRANSPARENCY.md).
 
 ---
 
@@ -128,16 +144,16 @@ Smart Browse and Power Clip work with popular browsers, making it easy to route 
 
 # 🎥 See PowerDroid in Action
 
-Watch how Smart Browse automatically routes links to the right browser and profile across your daily workflows.
+See how Smart Browse and Power Clip improve your everyday Windows workflow by automating link routing and making your clipboard history faster and easier to manage.
 
-👉 Tool walkthrough demo video: [Watch on LinkedIn]()
+👉 Smart Browse Tool walkthrough demo video: [Watch on YouTube](https://www.youtube.com/watch?v=U3q-eB-bnrs)
+👉 Power Clip Tool walkthrough demo video: [Watch on YouTube](https://www.youtube.com/watch?v=FEXsZww8Z38&t=31s)
 
 ---
 
 # 🚀 Get PowerDroid
 
-- Open every link in the right browser and profile — automatically
-- Keep a fast, private, encrypted clipboard history
-- Organize work, personal, and development workflows with ease
+- Open every link in the right browser and profile automatically
+- Search, reuse, and manage copied content without repeatedly copying it.
 
 👉 [Download PowerDroid](http://admindroid.com/powerdroid-smart-browse)
